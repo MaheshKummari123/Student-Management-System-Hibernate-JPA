@@ -16,16 +16,17 @@ public class App {
 		
 		boolean flag=true;
 		while(flag) {
-			System.out.println("1. Add Student\n2. View All Students\n3. UpdateStudent\n4.Delete Studen\n5. Exit");
+			System.out.println("1. Add Student\n2. View Students Data\n3. UpdateStudent\n4. Delete Studen\n5. Exit");
 			int choice=sc.nextInt();
+			sc.nextLine();
 			switch(choice) {
 			case 1:
 				System.out.println("Enter Student Name: ");
-				String name=sc.next();
+				String name=sc.nextLine();
 				System.out.println("Enter Student Email: ");
-				String email=sc.next();
+				String email=sc.nextLine();
 				System.out.println("Enter Student Course: ");
-				String course=sc.next();
+				String course=sc.nextLine();
 				Student st=new Student();
 				st.setName(name);
 				st.setEmail(email);
@@ -37,50 +38,56 @@ public class App {
 			case 2:
 				System.out.println("1. Fetch By Id\n2. Fetch By Name\n3. Fetch By Email\n4.Fetch By Course\n5. Fetch All Records\n6. None");
 				int pick=sc.nextInt();
-				
+				sc.nextLine();
 				if(pick==5)break;
 				
 				if(pick==1) {
 					System.out.println("Enter Id: ");
 					int id=sc.nextInt();
+					
 					List<Student> students=dao.fetchById(id);
-					System.out.println("Student ID \tStudent Name \tStudent Email \tStudent Course");
+					System.out.printf("%-12s %-15s %-30s %-15s%n","Student Id","Student Name","Student Email","Student Course");
+					System.out.println("----------------------------------------------------------------------------------");
 					for(Student stu: students) {
-						System.out.println(stu.getId()+"\t"+stu.getName()+"\t"+stu.getEmail()+"\t"+stu.getCourse());
+						System.out.printf("%-12s %-15s %-30s %-15s%n",stu.getId(),stu.getName(),stu.getEmail(),stu.getCourse());
 					}
 				}
 				else if(pick==2) {
 					System.out.println("Enter Name: ");
-					String name1=sc.next();
+					String name1=sc.nextLine();
 					List<Student> students=dao.fetchByName(name1);
-					System.out.println("Student ID \tStudent Name \tStudent Email \tStudent Course");
+					System.out.printf("%-12s %-15s %-30s %-15s%n","Student Id","Student Name","Student Email","Student Course");
+					System.out.println("----------------------------------------------------------------------------------");
 					for(Student stu: students) {
-						System.out.println(stu.getId()+"\t"+stu.getName()+"\t"+stu.getEmail()+"\t"+stu.getCourse());
+						System.out.printf("%-12s %-15s %-30s %-15s%n",stu.getId(),stu.getName(),stu.getEmail(),stu.getCourse());
 					}
 				}
 				else if(pick==3) {
 					System.out.println("Enter Email: ");
-					String email1=sc.next();
+					String email1=sc.nextLine();
 					List<Student> students=dao.fetchByName(email1);
-					System.out.println("Student ID \tStudent Name \tStudent Email \tStudent Course");
+					System.out.printf("%-12s %-15s %-30s %-15s%n","Student Id","Student Name","Student Email","Student Course");
+					System.out.println("----------------------------------------------------------------------------------");
 					for(Student stu: students) {
-						System.out.println(stu.getId()+"\t"+stu.getName()+"\t"+stu.getEmail()+"\t"+stu.getCourse());
+						System.out.printf("%-12s %-15s %-30s %-15s%n",stu.getId(),stu.getName(),stu.getEmail(),stu.getCourse());
 					}
 				}
 				else if(pick==4) {
 					System.out.println("Enter Course: ");
-					String course1=sc.next();
+					String course1=sc.nextLine();
 					List<Student> students=dao.fetchByName(course1);
-					System.out.println("Student ID \tStudent Name \tStudent Email \tStudent Course");
+					System.out.printf("%-12s %-15s %-30s %-15s%n","Student Id","Student Name","Student Email","Student Course");
+					System.out.println("----------------------------------------------------------------------------------");
 					for(Student stu: students) {
-						System.out.println(stu.getId()+"\t"+stu.getName()+"\t"+stu.getEmail()+"\t"+stu.getCourse());
+						System.out.printf("%-12s %-15s %-30s %-15s%n",stu.getId(),stu.getName(),stu.getEmail(),stu.getCourse());
 					}
 				}
-				else {
+				else if(pick==5){
 					List<Student> students=dao.fetchAll();
-					System.out.println("Student ID \tStudent Name \tStudent Email \tStudent Course");
+					System.out.printf("%-12s %-15s %-30s %-15s%n","Student Id","Student Name","Student Email","Student Course");
+					System.out.println("----------------------------------------------------------------------------------");
 					for(Student stu: students) {
-						System.out.println(stu.getId()+"\t"+stu.getName()+"\t"+stu.getEmail()+"\t"+stu.getCourse());
+						System.out.printf("%-12s %-15s %-30s %-15s%n",stu.getId(),stu.getName(),stu.getEmail(),stu.getCourse());
 					}
 				}
 				break;
@@ -89,6 +96,7 @@ public class App {
 			case 3:
 				System.out.println("1.Update Name\n2.Update Email\n3.Update Course\n4.Update All\n5.None");
 				int pick1=sc.nextInt();
+				sc.nextLine();
 				if(pick1==5) {
 					break;
 				}
@@ -104,7 +112,7 @@ public class App {
 				}
 				else if(pick1==2) {
 					System.out.println("Enter Updated Student Email: ");
-					String email1=sc.next();
+					String email1=sc.nextLine();
 					if(dao.updateEmail(id1, email1)) {
 						System.out.println("Email is Updated to "+email1);
 					}
@@ -112,7 +120,7 @@ public class App {
 				}
 				else if(pick1==3){
 					System.out.println("Enter Updated Student Course: ");
-					String course1=sc.next();
+					String course1=sc.nextLine();
 					if(dao.updateCourse(id1, course1)) {
 						System.out.println("Course is Updated to "+course1);
 					}
