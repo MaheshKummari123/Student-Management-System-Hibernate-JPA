@@ -104,7 +104,7 @@ public class App {
 				int id1=sc.nextInt();
 				if(pick1==1) {
 					System.out.println("Enter Updated Student Name: ");
-					String name1=sc.next();
+					String name1=sc.nextLine();
 					if(dao.updateName(id1, name1)) {
 						System.out.println("Name is Updated to "+name1);
 					}
@@ -128,11 +128,11 @@ public class App {
 				}
 				else if(pick1==4) {
 					System.out.println("Enter Updated Student Name: ");
-					String name1=sc.next();
+					String name1=sc.nextLine();
 					System.out.println("Enter Updated Student Email: ");
-					String email1=sc.next();
+					String email1=sc.nextLine();
 					System.out.println("Enter Updated Student Course: ");
-					String course1=sc.next();
+					String course1=sc.nextLine();
 					
 					
 					if(dao.update(id1,name1,email1,course1)) {
