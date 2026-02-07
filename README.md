@@ -150,6 +150,7 @@ SELECT s FROM Student s WHERE s.course = :c
 👨‍💻 Author
 
 Kummari Mahesh
+
 Java & Backend Developer
 Hibernate | JPA | PostgreSQL | Spring Boot (Learning)
 
