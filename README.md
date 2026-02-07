@@ -53,7 +53,6 @@ It follows the **DAO design pattern** and demonstrates how Hibernate manages ent
 ---
 
 ## 📂 Project Structure
-
 src/main/java
 └── hibernatestudentmanagement
 ├── main
@@ -68,8 +67,6 @@ src/main/java
 src/main/resources
 └── META-INF
 └── persistence.xml
-
-pom.xml
 
 
 ---
