@@ -100,53 +100,57 @@ PostgreSQL Database
 
 ## 🔍 JPQL Queries Used
 
-```sql
+sql
 SELECT s FROM Student s
 SELECT s FROM Student s WHERE s.id = :i
 SELECT s FROM Student s WHERE s.name = :n
 SELECT s FROM Student s WHERE s.email = :e
 SELECT s FROM Student s WHERE s.course = :c
 
+
 ▶️ How to Run
 
-Clone the repository
+1. Clone the repository
 
-Create a PostgreSQL database named school
+2. Create a PostgreSQL database named school
 
-Update DB credentials in persistence.xml
+3. Update DB credentials in persistence.xml
 
-Run App.java
+4. Run App.java
 
-Use console menu to perform CRUD & search operations
+5. Use console menu to perform CRUD & search operations
+
 
 🧠 Learning Outcomes
 
-Deep understanding of Hibernate Entity Lifecycle
+- Deep understanding of Hibernate Entity Lifecycle
 
-Hands-on experience with EntityManager & transactions
+- Hands-on experience with EntityManager & transactions
 
-Writing efficient JPQL queries
+- Writing efficient JPQL queries
 
-DAO design pattern implementation
+- DAO design pattern implementation
 
-PostgreSQL integration using Hibernate
+- PostgreSQL integration using Hibernate
 
-Building applications using pure JPA
+- Building applications using pure JPA
 
 🔮 Future Enhancements
 
-Convert to Spring Boot
+-> Convert to Spring Boot
 
-Add REST APIs
+-> Add REST APIs
 
-Add Web UI (JSP / React)
+-> Add Web UI (JSP / React)
 
-Pagination & sorting
+-> Pagination & sorting
 
-Exception handling & logging
+-> Exception handling & logging
+
+
 
 👨‍💻 Author
 
-Mahesh
+Kummari Mahesh
 Java & Backend Developer
 Hibernate | JPA | PostgreSQL | Spring Boot (Learning)
