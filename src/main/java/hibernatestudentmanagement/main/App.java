@@ -102,6 +102,7 @@ public class App {
 				}
 				System.out.println("Enter which student id details you want to Update:");
 				int id1=sc.nextInt();
+				sc.nextLine();
 				if(pick1==1) {
 					System.out.println("Enter Updated Student Name: ");
 					String name1=sc.nextLine();
