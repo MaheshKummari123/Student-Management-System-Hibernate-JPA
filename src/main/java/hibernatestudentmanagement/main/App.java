@@ -39,7 +39,7 @@ public class App {
 				System.out.println("1. Fetch By Id\n2. Fetch By Name\n3. Fetch By Email\n4.Fetch By Course\n5. Fetch All Records\n6. None");
 				int pick=sc.nextInt();
 				sc.nextLine();
-				if(pick==5)break;
+				if(pick==6)break;
 				
 				if(pick==1) {
 					System.out.println("Enter Id: ");
